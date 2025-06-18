@@ -1,0 +1,40 @@
+{
+  "payment_provider_requirements": {
+    "wechat_pay": {
+      "description": "微信支付（国内）需要提供以下商户信息。适用于网站、App、小程序等场景。",
+      "required_info": [
+        "AppID (应用ID)",
+        "MchID (商户号)",
+        "APIv3 Key (APIv3密钥)",
+        "API Certificate Serial Number (API证书序列号)",
+        "Private Key (.pem file content) (私钥文件内容)"
+      ],
+      "note": "以上信息均可在微信支付商户平台获取。"
+    },
+    "alipay": {
+      "description": "支付宝（国内）需要提供以下开放平台信息。适用于电脑网站支付或手机网站支付。",
+      "required_info": [
+        "AppID (应用ID)",
+        "Alipay Public Key (支付宝公钥)",
+        "App Private Key (应用私钥)"
+      ],
+      "note": "以上信息均可在支付宝开放平台获取。"
+    },
+    "stripe": {
+      "description": "Stripe 是一个国际主流支付平台，支持全球多种信用卡和支付方式（如 iDEAL）。",
+      "required_info": [
+        "Publishable Key (可发布的密钥)",
+        "Secret Key (私钥)"
+      ],
+      "note": "这些密钥可以在 Stripe Dashboard 的 API Keys 部分找到。一个 Stripe 账户即可同时处理信用卡和 iDEAL 等支付。"
+    },
+    "ideal": {
+      "description": "iDEAL 是荷兰常用的一种在线支付方式，可以通过 Stripe 进行集成。",
+      "required_info": [
+        "已激活 iDEAL 支付方式的 Stripe 账户"
+      ],
+      "note": "在 Stripe Dashboard 的支付方式设置中，确保 iDEAL 已经为你的账户激活。"
+    }
+  },
+  "general_note": "警告：这些密钥是高度敏感的信息，请务必妥善保管，切勿在前端代码中泄露。它们应该存储在安全的后端服务器并通过环境变量进行管理。"
+} 
