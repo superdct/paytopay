@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function updatePayButtonText() {
         const amount = parseFloat(amountInput.value).toFixed(2);
         if (isNaN(amount) || amount <= 0) {
-            payButton.textContent = '请输入有效金额';
+            payButton.textContent = 'Please enter a valid amount';
             payButton.disabled = true;
         } else if (!selectedMethod) {
-            payButton.textContent = '请选择支付方式';
+            payButton.textContent = 'Please select a payment method';
             payButton.disabled = true;
         } else {
-            payButton.textContent = `确认支付 ¥${amount}`;
+            payButton.textContent = `Confirm payment ${amount}`;
             payButton.disabled = false;
         }
     }
@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function processPayment() {
         const amount = parseFloat(amountInput.value);
         
-        console.log(`正在请求支付...`);
-        console.log(`金额: ${amount}`);
-        console.log(`方式: ${selectedMethod}`);
+        console.log(`Requesting payment...`);
+        console.log(`Amount: ${amount}`);
+        console.log(`Method: ${selectedMethod}`);
 
-        showStatusModal('loading', '正在创建安全支付链接...');
+        showStatusModal('loading', 'Creating secure payment link...');
 
         // --- 模拟后端API调用 ---
         // 在真实场景中，这里会使用 fetch() 向你的后端发送请求
@@ -90,13 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const isSuccess = Math.random() > 0.2; // 80% 成功率
 
             if (isSuccess) {
-                console.log('支付成功');
-                showStatusModal('success', '支付成功！感谢您的惠顾。');
+                console.log('Payment successful');
+                showStatusModal('success', 'Payment successful! Thank you for your business.');
                 // 真实场景：后端会返回支付二维码URL或重定向到支付网关
                 // window.location.href = data.paymentUrl;
             } else {
-                console.error('支付失败');
-                showStatusModal('error', '支付失败，请稍后重试。');
+                console.error('Payment failed');
+                showStatusModal('error', 'Payment failed, please try again later.');
             }
 
             // 3秒后自动关闭弹窗

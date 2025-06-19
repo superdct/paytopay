@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>安全支付 - StarRiver</title>
+    <title>Secure Payment</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,42 +12,42 @@
 <body>
     <div class="payment-container">
         <div class="payment-header">
-            <h1 class="title">安全支付</h1>
-            <p class="subtitle">向 StarRiver 平台支付</p>
+            <h1 class="title">Secure Payment</h1>
+            <p class="subtitle">Pay to SuperDCT</p>
         </div>
 
         <div class="amount-section">
-            <label for="amount" class="amount-label">支付金额 (CNY)</label>
+            <label for="amount" class="amount-label">Payment Amount (USD)</label>
             <div class="amount-input-wrapper">
                 <span class="currency-symbol">¥</span>
-                <input type="number" id="amount" class="amount-input" placeholder="请输入金额" value="100.00">
+                <input type="number" id="amount" class="amount-input" placeholder="Enter amount" value="100.00">
             </div>
         </div>
 
         <div class="payment-methods">
-            <p class="methods-title">选择支付方式</p>
+            <p class="methods-title">Select Payment Method</p>
             <div class="methods-grid">
                 <div class="method-card" data-method="wechatpay">
-                    <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/wechat-icon.png" alt="微信支付">
-                    <span>微信支付</span>
+                    <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/wechat-icon.png" alt="WeChat Pay">
+                    <span>WeChat Pay</span>
                 </div>
                 <div class="method-card" data-method="alipay">
-                    <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/alipay-icon.png" alt="支付宝">
-                    <span>支付宝</span>
+                    <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/alipay-icon.png" alt="Alipay">
+                    <span>Alipay</span>
                 </div>
                 <div class="method-card" data-method="stripe">
                     <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/stripe-icon.png" alt="Stripe">
-                    <span>信用卡 / iDEAL</span>
+                    <span>Credit Card / iDEAL</span>
                 </div>
             </div>
         </div>
 
         <button id="pay-button" class="pay-button">
-            确认支付 ¥100.00
+            Confirm Payment $100.00
         </button>
 
         <div class="footer-text">
-            <p>由 StarRiver AI 提供技术支持</p>
+            <p>Powered by SuperDCT</p>
         </div>
     </div>
 
@@ -57,7 +57,7 @@
             <div id="loader" class="loader"></div>
             <img id="success-icon" class="status-icon hidden" src="https://img.uxwing.com/wp-content/themes/uxwing/download/user-interface/success-green-check-mark-icon.png" alt="Success">
             <img id="error-icon" class="status-icon hidden" src="https://img.uxwing.com/wp-content/themes/uxwing/download/user-interface/error-icon.png" alt="Error">
-            <p id="status-message" class="status-message">正在处理您的支付请求...</p>
+            <p id="status-message" class="status-message">Processing your payment request...</p>
         </div>
     </div>
 
